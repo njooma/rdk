@@ -49,7 +49,7 @@ func (r ResourceDataConsumer) QueryTabularDataForResource(
 	}
 
 	orgID := os.Getenv(utils.PrimaryOrgIDEnvVar)
-	partID := os.Getenv(utils.MachinePartIDEnvVar)
+	machineID := os.Getenv(utils.MachineIDEnvVar)
 
 	timeBack := -24 * time.Hour
 	if opts != nil && opts.TimeBack != 0 {
@@ -62,7 +62,7 @@ func (r ResourceDataConsumer) QueryTabularDataForResource(
 	query := []map[string]any{
 		{
 			"$match": map[string]any{
-				"part_id":        partID,
+				"robot_id":       machineID,
 				"component_name": resourceName,
 				"time_received": map[string]any{
 					"$gte": time.Now().Add(timeBack),
