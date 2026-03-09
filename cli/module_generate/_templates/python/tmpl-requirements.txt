@@ -1,3 +1,5 @@
+--extra-index-url https://buf.build/gen/python
+
 {{ if eq .ResourceSubtype "mlmodel" }}
 viam-sdk[mlmodel]=={{ .SDKVersion }}
 {{ else }}
