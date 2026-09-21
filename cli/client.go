@@ -26,8 +26,8 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"charm.land/huh/v2"
 	"github.com/Masterminds/semver/v3"
-	"github.com/charmbracelet/huh"
 	"github.com/fullstorydev/grpcurl"
 	"github.com/google/uuid"
 	"github.com/jhump/protoreflect/grpcreflect"

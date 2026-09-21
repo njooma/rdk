@@ -3851,7 +3851,7 @@ Run this command from within the module directory.`,
 							Usage: formatAcceptedValues("(app only) app type", "single_machine", "multi_machine"),
 						},
 					},
-					Action: createActionCommandWithT[generateModuleArgs](GenerateModuleAction),
+					Action: createActionCommandWithT[generateModuleArgs](GenerateModuleActionV2),
 				},
 				{
 					Name:      "update",
@@ -4582,7 +4582,7 @@ This won't work unless you have an existing installation of our GitHub app on yo
 						trainFlagDatasetRoot, trainFlagTrainingScriptDirectory,
 						trainFlagDatasetFile, trainFlagContainerVersion, trainFlagModelOutputDirectory,
 					}, true, false),
-					Description: `Test your training script locally before submitting to the cloud. This runs your training script 
+					Description: `Test your training script locally before submitting to the cloud. This runs your training script
 in a Docker container using the same environment as cloud training.
 
 REQUIREMENTS:
